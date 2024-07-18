@@ -1,0 +1,39 @@
+.navigation {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    list-style: none;
+
+    margin: 0; 
+    padding: 0;
+}
+
+.iconContainer {
+    display:block;
+    position:static;
+    
+    width: 47px;
+    height: 47px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+
+    overflow: hidden;
+}
+
+li {
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+li:hover {
+    cursor: pointer;
+    opacity: 60%;
+}
+
+a img {
+    width: auto;
+    height: 47px;
+    margin: 0;
+}

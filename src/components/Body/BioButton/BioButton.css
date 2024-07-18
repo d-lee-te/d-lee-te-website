@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nova+Mono&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+  --spinCount: 3;
+}
+
+.container {
+    position: static;
+
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    width: 100%;
+    height:auto;
+
+    margin-top: .3%;
+    flex-shrink: 1;
+  }
+
+  
+.spin-button {
+  position: static;
+
+  background-image: url(../../../assets/button-icon/clean_at.png);
+  background-color: transparent;
+
+  color:rgba(255, 255, 255, 0);
+
+  opacity: 1;
+
+  width: 50px;
+  height: 50px;
+
+  border: none;
+
+  margin-left:30%;
+  margin-right: 4%;
+  flex-shrink: 0;
+
+  transition: transform 0.6s ease;
+  }
+
+  .spin-button:hover {
+    cursor: pointer;
+
+    opacity: 60%;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(calc(var(--spinCount) * -360deg));
+    }
+    100% {
+      transform: rotate(calc(var(--spinCount) * 360deg));
+    }
+  }
+  
+  @keyframes spin-backwards {
+    0% {
+      transform: rotate(calc(var(--spinCount) * 360deg));
+    }
+    100% {
+      transform: rotate(calc(var(--spinCount) * -360deg));
+    }
+}
+
+.text {
+  font-family: "Roboto Mono";
+  font-size: 14px;
+
+  color:white;
+  background-color: rgba(12, 12, 12, 0.164);
+  opacity: 0;
+  
+  
+  text-wrap: pretty;
+  text-align: center;
+
+  border:1px solid rgba(14, 13, 13, 0.199);
+  
+  width: 40%;
+  height: auto;
+
+  padding-top: 1%;
+  padding-right: 1%;
+  padding-left: 1%;
+
+  margin: 0;
+  flex-shrink: 1;
+
+  transition: opacity 0.3s ease, transform 2s ease;
+}
+  
+  .text:hover {
+    background-color: rgba(12, 12, 12, 0.781);
+    border:1px solid rgb(14, 13, 13);
+}
+  
+.text.right-in {
+  animation: rightIn 1s forwards;
+  }
+
+  @keyframes rightIn {
+    0% {
+      visibility: hidden;
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(0%);
+    }
+}
+  
+  
+.text.left-out {
+  animation: leftOut 1s forwards;
+  }
+
+  @keyframes leftOut {
+    0% {
+      visibility: visible;
+      opacity: 1;
+      height: auto;
+      transform: translateX(0%);
+    }
+    100% {
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+      transform: translateX(-100%);
+    }
+}
+  
+  
