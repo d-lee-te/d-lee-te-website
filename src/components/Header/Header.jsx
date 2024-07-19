@@ -1,6 +1,6 @@
 import TypeTitle from "./TypeTitle.jsx";
 import './Header.css'
-import metry from '../../assets/metry.jpg'
+import metry from '../../assets/grad-pic.jpg'
 
 const Header = () => {
     const disArray = ['David Lee', 'David-Lee', 'dleete', 'd-lee-te'];
@@ -10,7 +10,9 @@ const Header = () => {
             <div className = "imgContainer">
                 <img src={metry} alt="metry"/>
             </div>
-            <TypeTitle display={disArray} />
+            <div className = "typo">
+                <TypeTitle display={disArray} />
+            </div>
             <hr/>
         </div>
     );
