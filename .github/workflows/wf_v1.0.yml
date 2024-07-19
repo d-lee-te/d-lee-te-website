@@ -43,6 +43,8 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      #Problem was, I wasn't using the composite action
+      #This fixed workflow
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
