@@ -42,8 +42,8 @@ jobs:
           name: production-files
           path: ./dist
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          ssh-key: ${{ secrets.DEPLOY_KEY }}
-          folder: ./dist
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
