@@ -38,7 +38,9 @@ jobs:
         run: npm ci
 
       - name: Build project
-        run: npm run build
+        run: |
+          npm run build
+          find ./dist -type l -exec rm -f {} \;
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
