@@ -8,7 +8,7 @@
     text-align: center;
 
     font-family: "Roboto Mono";
-    font-size: 300%;
+    font-size: 330%;
     font-weight: 900;
 
     color:rgba(119, 115, 115, 0.342);
@@ -47,6 +47,7 @@ img {
 
 hr {
     width: 45%;
+    margin-top: 1%;
     margin-bottom: .8%;
 }
 
