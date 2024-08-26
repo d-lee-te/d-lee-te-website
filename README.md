@@ -11,6 +11,13 @@ This site serves two purposes:
 
 ## Changelog
 
+
+### 8/26 Resume Update
+I updated my resume ever so slightly, and now that I look at the site, I realize that I have a ton of stuff I want to add to this site...
+
+But if I want to do that, I'm probably going to just rebuild the project, so I can build some of these components differently and use tailwindcss.
+
+We put that off until some time in the future when my head isn't already full of other things I want to build xp
 ### 7/19 v1.1
 After many failed attempts, I finally managed to create a custom workflow and deploy the the website on gitpages.
 
