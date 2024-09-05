@@ -1,28 +1,22 @@
 name: wf_v1.0
 
 on:
-
   push:
     branches: ['main']
-
   workflow_dispatch:
 
 permissions:
   actions: read
   contents: read
-  pages: write
   id-token: write
 
 concurrency:
-  group: 'pages'
+  group: 'vercel'
   cancel-in-progress: true
 
 jobs:
   build:
-    name: Build
-    environment:
-      name: github-pages
-      url: ${{steps.deployment.outputs.page_url}}
+    name: Build and Deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
@@ -40,18 +34,12 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      #Problem was, I wasn't using the composite action
-      #This fixed workflow
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v1
         with:
-          path: './dist'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-  
-        
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: '--prod'
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
