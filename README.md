@@ -1,7 +1,7 @@
 # D-lee-te Website
 
 ## About
-[D-lee-te](http://a.com) is my github page written in React and built with ViteJS, and my personal page for the time being.
+[D-lee-te](http://a.com) is my personal page written in React, built with ViteJS, and deployed w/ Vercel, and my personal page for the time being.
 
 This site serves two purposes:
 - A way to conviniently send anyone to my pages without linking each individually.
