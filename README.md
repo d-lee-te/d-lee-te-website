@@ -11,7 +11,8 @@ This site serves two purposes:
 
 ## Changelog
 
-
+### 9/5 Deployment
+I wanted to learn how to deploy a website to a custom domain, so I learned how to deploy w/ Vercel...and it wasn't too bad to use! Very happy with the switch.
 ### 8/26 Resume Update
 I updated my resume ever so slightly, and now that I look at the site, I realize that I have a ton of stuff I want to add to this site...
 
