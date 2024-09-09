@@ -15,6 +15,9 @@ dist-ssr
 # todo
 /todo.txt
 
+# horrible mock-ups
+*.pdn
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
