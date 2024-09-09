@@ -10,7 +10,18 @@ This site serves two purposes:
 
 
 ## Changelog
+### 9/9 Rebuild
+The idea of rebuilding my website really sat on my mind, and I have a couple ideas for how I want to build it...better? First things first, we'll return to status quo and just refactor the website with a fresh project.
+That means:
+- We bootstrapped our project with NextJS
+- We grabbed the following packages:
+  - (tsparticles)[https://particles.js.org/]
+  - (@tsparticles/engine)[https://www.npmjs.com/package/@tsparticles/engine]
+  - (@tsparticles/react)[https://github.com/tsparticles/react]
+  - (nextjs-simple-typewriter)[https://github.com/SoloReverse/nextjs-simple-typewriter]
+Also, we're using tailwindcss now.
 
+I also made a little to-do list for myself, but we'll hammer out the todos over the following week without spoiling anything!
 ### 9/5 Deployment
 I wanted to learn how to deploy a website to a custom domain, so I learned how to deploy w/ Vercel...and it wasn't too bad to use! Very happy with the switch.
 ### 8/26 Resume Update
