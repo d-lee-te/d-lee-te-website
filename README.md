@@ -15,10 +15,10 @@ The idea of rebuilding my website really sat on my mind, and I have a couple ide
 That means:
 - We bootstrapped our project with NextJS
 - We grabbed the following packages:
-  - (tsparticles)[https://particles.js.org/]
-  - (@tsparticles/engine)[https://www.npmjs.com/package/@tsparticles/engine]
-  - (@tsparticles/react)[https://github.com/tsparticles/react]
-  - (nextjs-simple-typewriter)[https://github.com/SoloReverse/nextjs-simple-typewriter]
+  - [tsparticles](https://particles.js.org/)
+  - [@tsparticles/engine](https://www.npmjs.com/package/@tsparticles/engine)
+  - [@tsparticles/react](https://github.com/tsparticles/react)
+  - [nextjs-simple-typewriter](https://github.com/SoloReverse/nextjs-simple-typewriter)
 Also, we're using tailwindcss now.
 
 I also made a little to-do list for myself, but we'll hammer out the todos over the following week without spoiling anything!
