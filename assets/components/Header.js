@@ -1,12 +1,15 @@
-import Pfp from "@/components/Pfp";
+import Pfp from "@/assets/components/Pfp";
 import { Typewriter } from "nextjs-simple-typewriter";
 
 
 export default function Header() {
     return(
-        <div className='flex flex-col items-center justify-items-center'>
-            <Pfp/>
-            <div className="text-6xl">
+        <div className='flex flex-col items-center justify-items-center text-8xl'>
+            <div>
+                <Pfp/>
+            </div>
+
+            <div className="5xl">
                 <Typewriter
                 words={["test", "testing", "testing the test", "test test"]}
                 startFrom='empty'
