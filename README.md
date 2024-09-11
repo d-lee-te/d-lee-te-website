@@ -10,6 +10,8 @@ This site serves two purposes:
 
 
 ## Changelog
+### 9/11 Rebuild
+I updated my resume yesterday, and I'm pushing the troubled branch, so I can revisit it later. I literally have no clue why it isn't building correctly, and I'd like to know why...but we'll just keep moving forward for now. I have my suspicions, but I want to get this done soon.
 ### 9/9 Rebuild
 The idea of rebuilding my website really sat on my mind, and I have a couple ideas for how I want to build it...better? First things first, we'll return to status quo and just refactor the website with a fresh project.
 That means:
