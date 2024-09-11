@@ -1,16 +1,15 @@
 import Image from "next/image";
 
 export default function Navi() {
-    console.log("bark");
     return(
-        <div className='flex justify-center items-center w-screen border-2 border-gray-700'>
+        <div className='flex justify-center items-center w-screen gap-20'>
             <div>
                 <Image
                     src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" 
                     height={50}
                     width={50}
                     alt="githubIcon" 
-                    className=''
+                    className='rounded-full aspect-square object-cover'
                 />
             </div>
             <div>
@@ -19,7 +18,7 @@ export default function Navi() {
                     height={50}
                     width={50}
                     alt="linkedinIcon"
-                    className=''
+                    className='rounded-full aspect-square object-cover object-left'
                 />
             </div>
             <div>
@@ -28,7 +27,7 @@ export default function Navi() {
                     height={50}
                     width={50}
                     alt="resumepdf"
-                    className=''
+                    className='rounded-full aspect-square object-cover'
                 />
             </div>
         </div>
