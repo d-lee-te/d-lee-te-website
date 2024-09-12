@@ -27,6 +27,7 @@ So to summarize a bit:
 - Basic website was rebuilt with a few added nicer components
 - The website now renders mobile and desktop differently
 - I learned how to build custom hooks, created [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes), and called and fetched from an API with an [OAuth protocol](https://developer.spotify.com/documentation/web-api/concepts/authorization).
+- Also took a second to update my resume a little bit (but I'll probably update again by the end of this week or so)
 
 The Todo List and problems:
 - My API calls aren't automated, and currently, I have to boot up my local server, run a script, and go get my auth token, put in my auth token, all to fetch data from one scope.
