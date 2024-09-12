@@ -51,21 +51,21 @@ async function storeDataInMongo(currentlyPlaying, recentlyPlayed) {
     //   }));
 
 
-    //Temporary workaround for currently playing
-    if (recentlyPlayed && recentlyPlayed.length > 0) {
-      const mostRecent = recentlyPlayed[0];
-      const mostRecentData = {
-        songName: mostRecent.track.name,
-        songUrl: mostRecent.track.external_urls.spotify || mostRecent.track.album.external_urls.spotify,
-        timestep: new Date(mostRecent.played_at),
-        type: 'mostRecent',
-      }
-      await collection.updateOne(
-        { _id: 'latest' },
-        { $set: mostRecentData },
-        { upsert: true }
-      );
-    }
+    // //Temporary workaround for currently playing
+    // if (recentlyPlayed && recentlyPlayed.length > 0) {
+    //   const mostRecent = recentlyPlayed[0];
+    //   const mostRecentData = {
+    //     songName: mostRecent.track.name,
+    //     songUrl: mostRecent.track.external_urls.spotify || mostRecent.track.album.external_urls.spotify,
+    //     timestep: new Date(mostRecent.played_at),
+    //     type: 'mostRecent',
+    //   }
+    //   await collection.updateOne(
+    //     { _id: 'latest' },
+    //     { $set: mostRecentData },
+    //     { upsert: true }
+    //   );
+    // }
 
     //Most recent songs
     if (recentlyPlayed && recentlyPlayed.length > 0) {

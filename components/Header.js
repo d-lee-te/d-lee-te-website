@@ -1,16 +1,17 @@
 import Pfp from "@/components/Pfp";
 import { Typewriter } from "nextjs-simple-typewriter";
+import Player from "@/components/Player";
 
 
-export default function Header() {
+export default function Header({ recentMusic }) {
     return(
-        <div className='flex flex-col items-center justify-items-center text-6xl gap-4'>
+        <div className='flex flex-col items-center justify-center gap-1 mt-12 font-medium'>
             <div>
-                <Pfp/>
+                <Player recentMusic={recentMusic}/>
             </div>
-            <div>
+            <div className='text-7xl font-robotoMono text-neutral-900 font-bold font-outline-1'>
                 <Typewriter
-                words={["test", "testing", "testing the test", "test test "]}
+                words={['David Lee', 'David-Lee', 'dleete', 'd-lee-te']}
                 startFrom='empty'
 
                 typeSpeed={130}
@@ -19,7 +20,6 @@ export default function Header() {
 
                 cursor
                 cursorBlinking={true}
-
                 
                 loop={0}
                 />

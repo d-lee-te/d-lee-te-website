@@ -36,4 +36,13 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .font-outline-1 {
+    -webkit-text-stroke: 1px rgb(209, 197, 197); /* Adjust stroke size */
+  }
+  .font-outline-2 {
+    -webkit-text-stroke: 2px rgb(209, 197, 197);
+  }
+  .font-outline-4 {
+    -webkit-text-stroke: 4px rgb(209, 197, 197); /* For a thicker stroke */
+  }
 }
