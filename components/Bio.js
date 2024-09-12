@@ -27,11 +27,11 @@ export default function Bio() {
           }}
         >
 
-          <p className = "font-bold text-2xl text-center font-robotoMono">Hi, I'm David!</p>
+          <p className = "font-bold text-2xl text-center font-robotoMono">Hi, I&apos;m David!</p>
           <p className = "text-center">
-          🎓 I'm a graduate from Georgia Tech with a B.S. in CS and this is my personal page!<br/>
+          🎓 I&apos;m a graduate from Georgia Tech with a B.S. in CS and this is my personal page!<br/>
           Specifically, I graduated with specializations (aka threads 🧵) in Devices and Intelligence, and I love building and learning things!<br/><br/>
-          Here's some of the stuff I'm working or worked on!
+          Here&apos;s some of the stuff I&apos;m working or worked on!
           </p>
 
           <hr/>
