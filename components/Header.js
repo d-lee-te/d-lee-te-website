@@ -1,4 +1,3 @@
-import Pfp from "@/components/Pfp";
 import { Typewriter } from "nextjs-simple-typewriter";
 import Player from "@/components/Player";
 

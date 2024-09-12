@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { IoDocumentText } from "react-icons/io5";
 
 export default function Navi() {
     return(
@@ -27,13 +28,7 @@ export default function Navi() {
             </div>
             <div>
                 <a href='/resume.pdf' target="_blank">
-                    <Image
-                        src='/documenticon.svg'
-                        height={50}
-                        width={50}
-                        alt="resumepdf"
-                        className='rounded-full aspect-square object-cover'
-                    />
+                <IoDocumentText className='w-12 h-12 rounded-full aspect-square object-cover'/>
                 </a>
             </div>
         </div>

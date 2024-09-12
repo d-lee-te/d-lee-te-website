@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Particles, {initParticlesEngine} from "@tsparticles/react";
-import { loadFull } from "tsparticles"  //Engine or actual? Like do I need to go and grab tsparticles?
+import { loadFull } from "tsparticles"
 import particleConfig from "@/config/particles.json"
 
 export default function ParticleBackground() {
@@ -24,7 +24,7 @@ export default function ParticleBackground() {
         console.log(engine);
         await loadFull(engine);
     }, []);
-    const particleLoaded = useCallback(async (container) => {    //tf is container
+    const particleLoaded = useCallback(async (container) => {
         await console.log(container);
     }, []);
 
@@ -34,7 +34,7 @@ export default function ParticleBackground() {
             init={particleInit}
             loaded={particleLoaded}
             options={particleConfig}
-            height='100vh'  //viewport height
+            height='100vh'
             width='100vh'
         />
 

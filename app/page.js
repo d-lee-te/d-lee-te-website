@@ -1,5 +1,6 @@
 import DesktopComponent from "@/components/DesktopComponent";
 import MobileComponent from "@/components/MobileComponent";
+import ParticleBackground from "@/components/ParticleBackground";
 
 import clientPromise from "@/lib/mongodb";
 
@@ -8,6 +9,7 @@ export default async function Home() {
   const recentMusic = await getRecentMusic();
   return (
       <div>
+        <ParticleBackground className="fixed inset-0 w-full h-full -z-0"/>
         <div className="lg:hidden">
           <MobileComponent recentMusic= {recentMusic}/>
         </div>

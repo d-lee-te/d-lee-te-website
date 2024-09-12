@@ -1,7 +1,6 @@
 "use client"
 
 import useScroll from '@/hooks/useScroll';
-import Navi from "@/components/Navi";
 import Image from "next/image";
 import { FaChevronDown } from "react-icons/fa";
 
