@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden
+}
+
+*{
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  overflow:auto;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .font-outline-1 {
+    -webkit-text-stroke: 1px rgb(209, 197, 197); /* Adjust stroke size */
+  }
+  .font-outline-2 {
+    -webkit-text-stroke: 2px rgb(209, 197, 197);
+  }
+  .font-outline-4 {
+    -webkit-text-stroke: 4px rgb(209, 197, 197); /* For a thicker stroke */
+  }
+}
