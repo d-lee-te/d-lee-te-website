@@ -31,8 +31,8 @@ export default function Player({ recentMusic }) {
                     <Image
                       src='/dleete.jpg'
                       alt="Profile Picture"
-                      width={500}
-                      height={500}
+                      width={200}
+                      height={200}
                       className="rounded-full aspect-square object-cover border-8 border-white"
                     />
                     {isHovered && (

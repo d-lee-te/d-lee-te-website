@@ -15,7 +15,7 @@ const nextConfig = {
                 pathname: '/content/**'
             },
         ]
-    }
+    },
 };
 
 export default nextConfig;
