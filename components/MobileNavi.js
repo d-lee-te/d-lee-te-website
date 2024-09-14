@@ -24,7 +24,7 @@ export default function MobileNavi() {
                     />
                 </a>
                 <a href='/resume.pdf' target="_blank">
-                    <IoDocumentText className='w-12 h-12 rounded-full aspect-square object-cover'/>
+                    <IoDocumentText className='w-10 h-10 rounded-full aspect-square object-cover'/>
                 </a>
             </div>
         </div>
