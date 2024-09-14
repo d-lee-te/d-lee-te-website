@@ -12,7 +12,7 @@ export default function MobileBio() {
           <p className = "text-xs text-center">
           🎓 I&apos;m a graduate from Georgia Tech with a B.S. in CS, and I graduated with specializations (aka threads 🧵) in Devices and Intelligence<br/><br/>
           I love building and learning things!<br/><br/>
-          Here&apos;s some of the stuff I&apos;m working or worked on!<br/><br/>
+          Below are links to my relevant work socials!<br/><br/>
           </p>
           </div>
         </div>
