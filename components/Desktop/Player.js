@@ -12,32 +12,39 @@ export default function Player() {
   const profileUrl = 'https://stats.fm/flarusnova';
 
 
-  useEffect(() => {
-    async function fetchRecentSongs() {
-      try {
-        const response = await fetch('/api/spotify');
-        const data = await response.json();
+  async function fetchRecentSongs() {
+    try {
+      const response = await fetch('/api/spotify');
+      const data = await response.json();
 
-        if (data.error) {
-          console.error('Error fetching Spotify data:', data.error);
-          return;
-        }
-
-        const recentTracks = data.recentTracks;
-
-        const sortedSongs = recentTracks.sort(
-          (a, b) => new Date(b.played_at) - new Date(a.played_at)
-        );
-
-        const topSongs = sortedSongs.slice(0, 5);
-
-        setRecentSongs(topSongs);
-      } catch (error) {
-        console.error('Failed to fetch recent songs:', error);
+      if (data.error) {
+        console.error('Error fetching Spotify data:', data.error);
+        return;
       }
-    }
 
+      const recentTracks = data.recentTracks;
+
+      const sortedSongs = recentTracks.sort(
+        (a, b) => new Date(b.played_at) - new Date(a.played_at)
+      );
+
+      const topSongs = sortedSongs.slice(0, 5);
+
+      setRecentSongs(topSongs);
+    } catch (error) {
+      console.error('Failed to fetch recent songs:', error);
+    }
+  }
+
+  //Poll every 1 minutes
+  useEffect(() => {
     fetchRecentSongs();
+
+    const intervalId = setInterval(() => {
+      fetchRecentSongs();
+    }, 60000); //1 minute
+
+    return () => clearInterval(intervalId);
   }, []);
 
 
