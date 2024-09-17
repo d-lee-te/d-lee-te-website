@@ -95,7 +95,7 @@ export default function Player() {
           <thead>
             <tr>
               <th className="text-left px-4 py-1 border-b-4 border-gray-800" style={{ width: '200px' }}>
-                Song
+                Recent Songs
               </th>
               <th className="text-left px-4 py-1 border-b-4 border-gray-800" style={{ width: '180px' }}>
                 Artist
