@@ -1,51 +1,16 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import Image from 'next/image';
 import SongRow from './Table/SongRow';
+import { useSpotify } from '@/hooks/SpotifyContext';
 
 export default function Player() {
   const [isHovered, setIsHovered] = useState(false);
-  const [recentSongs, setRecentSongs] = useState([]);
+  const { recentSongs } = useSpotify()
 
   const profileUrl = 'https://stats.fm/flarusnova';
-
-
-  async function fetchRecentSongs() {
-    try {
-      const response = await fetch('/api/spotify');
-      const data = await response.json();
-
-      if (data.error) {
-        console.error('Error fetching Spotify data:', data.error);
-        return;
-      }
-
-      const recentTracks = data.recentTracks;
-
-      const sortedSongs = recentTracks.sort(
-        (a, b) => new Date(b.played_at) - new Date(a.played_at)
-      );
-
-      const topSongs = sortedSongs.slice(0, 5);
-
-      setRecentSongs(topSongs);
-    } catch (error) {
-      console.error('Failed to fetch recent songs:', error);
-    }
-  }
-
-  //Poll every 1 minutes
-  useEffect(() => {
-    fetchRecentSongs();
-
-    const intervalId = setInterval(() => {
-      fetchRecentSongs();
-    }, 60000); //1 minute
-
-    return () => clearInterval(intervalId);
-  }, []);
 
 
   return (

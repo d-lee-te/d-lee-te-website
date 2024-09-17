@@ -4,6 +4,7 @@ import Navi from "@/components/Desktop/Navi";
 import Bio from "@/components/Desktop/Bio";
 
 
+
 export default function DesktopComponent() {
     return (
         <div>
