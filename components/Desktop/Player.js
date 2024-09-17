@@ -1,18 +1,44 @@
 'use client';
 
-import { useState} from 'react';
+import { useState, useEffect } from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import Image from 'next/image';
 import SongRow from './Table/SongRow';
-import { useSpotify } from '@/hooks/SpotifyContext';
 
 export default function Player() {
   const [isHovered, setIsHovered] = useState(false);
-  const { recentSongs } = useSpotify()
+  const [recentSongs, setRecentSongs] = useState([]);
 
   const profileUrl = 'https://stats.fm/flarusnova';
 
+  useEffect(() => {
+    async function fetchRecentSongs() {
+      try {
+        const response = await fetch('https://dleete.dev/api/spotify');
+        const data = await response.json();
 
+        if (data.error) {
+          console.error('Error fetching Spotify data:', data.error);
+          setError('Error fetching Spotify data');
+          return;
+        }
+
+        const recentTracks = data.recentTracks;
+
+        const sortedSongs = recentTracks.sort(
+          (a, b) => new Date(b.played_at) - new Date(a.played_at)
+        );
+
+        const topSongs = sortedSongs.slice(0, 5);
+
+        setRecentSongs(topSongs);
+      } catch (error) {
+        console.error('Failed to fetch recent songs:', error);
+      }
+    }
+
+    fetchRecentSongs();
+  }, []);
   return (
     <div
       className="relative flex justify-center items-center w-96 h-96 text-7xl font-robotoMono"
