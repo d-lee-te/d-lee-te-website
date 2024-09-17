@@ -14,7 +14,7 @@ export default function Player() {
   useEffect(() => {
     async function fetchRecentSongs() {
       try {
-        const response = await fetch('https://dleete.dev/api/spotify');
+        const response = await fetch('/api/spotify');
         const data = await response.json();
 
         if (data.error) {
