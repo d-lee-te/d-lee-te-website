@@ -31,13 +31,13 @@ export default function Bio() {
           <p className = "text-center">
           🎓 I&apos;m a graduate from Georgia Tech with a B.S. in CS and this is my personal page!<br/>
           Specifically, I graduated with specializations (aka threads 🧵) in Devices and Intelligence, and I love building and learning things!<br/><br/>
-          Here&apos;s some of the stuff I&apos;m working or worked on!
+          Here&apos;s some of the stuff I&apos;ve worked on!
           </p>
 
           <hr/>
           <div className='flex justify-center items-center gap-20'>
             <div>
-              <a href="https://meep.dpvb.dev/" target="_blank">
+              <a href="https://meep.dpvb.dev/" target="_blank" rel="noopener noreferrer">
                   <Image
                       src="/chromameep.gif" 
                       height={50}
