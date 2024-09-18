@@ -13,11 +13,16 @@ This site serves two purposes:
 ### 9/17 API Calling
 So after said conversation with a friend, I looked into how I should be doing it.
 
-I gutted using MongoDB, and I reorganized a TON of files based on information I found online and the copious amounts of questions I asked ChatGPT.
+I reorganized a TON of files based on information I found online and the copious amounts of questions I asked ChatGPT.
 
 The end result was that I consolidated the API routes with a ton of useful error messages, but I still have a problem that the website won't call the API for the most recent information when it mounts.
 
 I suspect it has something to do with caching, but I'm still happy because I added a scrolling effect to the columns and rows of the table and organized it internally.
+
+I'm using [framer-motion](https://www.npmjs.com/package/framer-motion?activeTab=readme) for the scrolling, and I gutted axios and mongodb.
+
+I'm troubleshooting through it, but the expected behavior is that it should make an api call when the component is mounted clientside. This isn't super sustainable, and I should look into making this happen on server-side with rate-limiting, but I'm more confused why it doesn't update, so that comes first.
+
 ### 9/12 Rebuilt
 So what a process that was...
 
